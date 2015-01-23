@@ -11,6 +11,13 @@
 		527169691A72AA8400BBD003 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 527169681A72AA8400BBD003 /* Images.xcassets */; };
 		5271696C1A72AA8400BBD003 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5271696A1A72AA8400BBD003 /* MainMenu.xib */; };
 		527169781A72AA8400BBD003 /* Sidebar_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527169771A72AA8400BBD003 /* Sidebar_DemoTests.swift */; };
+		527169831A72AAC300BBD003 /* DisclosureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527169811A72AAC300BBD003 /* DisclosureViewController.swift */; };
+		527169841A72AAC300BBD003 /* DisclosureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527169821A72AAC300BBD003 /* DisclosureViewController.xib */; };
+		527169861A72AD2200BBD003 /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527169851A72AD2200BBD003 /* RightViewController.swift */; };
+		527169881A72AD5300BBD003 /* sideVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527169871A72AD5300BBD003 /* sideVC1.swift */; };
+		5271698A1A72AD6300BBD003 /* sideVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527169891A72AD6300BBD003 /* sideVC2.swift */; };
+		5271698C1A72AD7600BBD003 /* sideVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5271698B1A72AD7600BBD003 /* sideVC3.swift */; };
+		5271698E1A72AD8900BBD003 /* sideVC4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5271698D1A72AD8900BBD003 /* sideVC4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +39,13 @@
 		527169711A72AA8400BBD003 /* Sidebar DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sidebar DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		527169761A72AA8400BBD003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		527169771A72AA8400BBD003 /* Sidebar_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar_DemoTests.swift; sourceTree = "<group>"; };
+		527169811A72AAC300BBD003 /* DisclosureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisclosureViewController.swift; sourceTree = "<group>"; };
+		527169821A72AAC300BBD003 /* DisclosureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisclosureViewController.xib; sourceTree = "<group>"; };
+		527169851A72AD2200BBD003 /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
+		527169871A72AD5300BBD003 /* sideVC1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sideVC1.swift; sourceTree = "<group>"; };
+		527169891A72AD6300BBD003 /* sideVC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sideVC2.swift; sourceTree = "<group>"; };
+		5271698B1A72AD7600BBD003 /* sideVC3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sideVC3.swift; sourceTree = "<group>"; };
+		5271698D1A72AD8900BBD003 /* sideVC4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sideVC4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +69,13 @@
 		527169581A72AA8400BBD003 = {
 			isa = PBXGroup;
 			children = (
+				527169811A72AAC300BBD003 /* DisclosureViewController.swift */,
+				527169821A72AAC300BBD003 /* DisclosureViewController.xib */,
+				527169851A72AD2200BBD003 /* RightViewController.swift */,
+				527169871A72AD5300BBD003 /* sideVC1.swift */,
+				527169891A72AD6300BBD003 /* sideVC2.swift */,
+				5271698B1A72AD7600BBD003 /* sideVC3.swift */,
+				5271698D1A72AD8900BBD003 /* sideVC4.swift */,
 				527169631A72AA8400BBD003 /* Sidebar Demo */,
 				527169741A72AA8400BBD003 /* Sidebar DemoTests */,
 				527169621A72AA8400BBD003 /* Products */,
@@ -187,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				527169691A72AA8400BBD003 /* Images.xcassets in Resources */,
+				527169841A72AAC300BBD003 /* DisclosureViewController.xib in Resources */,
 				5271696C1A72AA8400BBD003 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +228,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				527169671A72AA8400BBD003 /* AppDelegate.swift in Sources */,
+				5271698A1A72AD6300BBD003 /* sideVC2.swift in Sources */,
+				527169831A72AAC300BBD003 /* DisclosureViewController.swift in Sources */,
+				5271698C1A72AD7600BBD003 /* sideVC3.swift in Sources */,
+				527169861A72AD2200BBD003 /* RightViewController.swift in Sources */,
+				527169881A72AD5300BBD003 /* sideVC1.swift in Sources */,
+				5271698E1A72AD8900BBD003 /* sideVC4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

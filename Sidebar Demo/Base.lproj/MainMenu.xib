@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6233" systemVersion="14A329f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6233"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -11,8 +11,17 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target">
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Sidebar_Demo" customModuleProvider="target">
             <connections>
+                <outlet property="leftTitle" destination="xoE-HI-bJb" id="8xS-uo-2GH"/>
+                <outlet property="mySplitViewController" destination="zDO-yg-LGq" id="uMh-Gl-1YA"/>
+                <outlet property="myStackView" destination="cOR-nk-56r" id="NqN-VS-1zg"/>
+                <outlet property="myStackViewController" destination="Ewd-qP-OnO" id="bfh-FP-FzE"/>
+                <outlet property="rightViewController" destination="2TP-ER-B6A" id="Ohr-Q8-0QH"/>
+                <outlet property="sidebar1" destination="cuP-yJ-JB9" id="GbH-Vb-4C2"/>
+                <outlet property="sidebar2" destination="Qtx-O2-6ok" id="Lb0-TG-99E"/>
+                <outlet property="sidebar3" destination="BuN-ra-HM0" id="7ZJ-Fv-dls"/>
+                <outlet property="sidebar4" destination="uKX-NO-ydH" id="jeG-hD-QsV"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -636,8 +645,8 @@
                                     <action selector="performMiniaturize:" target="-1" id="VwT-WD-YPe"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Zoom" id="R4o-n2-Eq4">
-                                <modifierMask key="keyEquivalentModifierMask"/>
+                            <menuItem title="Zoom" keyEquivalent="z" id="R4o-n2-Eq4">
+                                <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
                                 <connections>
                                     <action selector="performZoom:" target="-1" id="DIl-cC-cCs"/>
                                 </connections>
@@ -670,11 +679,111 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
             </view>
         </window>
+        <viewController id="zDO-yg-LGq" customClass="NSSplitViewController">
+            <connections>
+                <outlet property="view" destination="u6R-iq-2Vr" id="QbB-kF-h8g"/>
+            </connections>
+        </viewController>
+        <customView id="u6R-iq-2Vr" userLabel="SplitView">
+            <rect key="frame" x="0.0" y="0.0" width="163" height="96"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <stackView orientation="vertical" alignment="centerX" horizontalHuggingPriority="249" verticalHuggingPriority="249" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cOR-nk-56r">
+                    <rect key="frame" x="-117" y="-54" width="273" height="251"/>
+                </stackView>
+            </subviews>
+        </customView>
+        <viewController id="2TP-ER-B6A" userLabel="RightVC" customClass="RightViewController" customModule="Sidebar_Demo" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Tiq-fL-j1Q" id="crU-c8-SvJ"/>
+            </connections>
+        </viewController>
+        <customView id="Tiq-fL-j1Q" userLabel="Right View">
+            <rect key="frame" x="0.0" y="0.0" width="523" height="384"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <point key="canvasLocation" x="307.5" y="725"/>
+        </customView>
+        <customView translatesAutoresizingMaskIntoConstraints="NO" id="xoE-HI-bJb" userLabel="Left Title View">
+            <rect key="frame" x="0.0" y="0.0" width="457" height="56"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="scU-P2-XpW">
+                    <rect key="frame" x="33" y="5" width="397" height="37"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Title" id="BJq-NS-1oM">
+                        <font key="font" size="23" name="HelveticaNeue"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="scU-P2-XpW" firstAttribute="leading" secondItem="xoE-HI-bJb" secondAttribute="leading" constant="35" id="0tJ-39-UYX"/>
+                <constraint firstAttribute="centerY" secondItem="scU-P2-XpW" secondAttribute="centerY" id="ofV-yO-oH2"/>
+                <constraint firstItem="scU-P2-XpW" firstAttribute="top" secondItem="xoE-HI-bJb" secondAttribute="top" constant="14" id="qMD-EW-Cf6"/>
+            </constraints>
+            <point key="canvasLocation" x="285.5" y="192.5"/>
+        </customView>
+        <customView translatesAutoresizingMaskIntoConstraints="NO" id="pLM-PD-69i" userLabel="Sidebar 1">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="127"/>
+            <constraints>
+                <constraint firstAttribute="width" constant="300" id="3uR-wN-ssY"/>
+                <constraint firstAttribute="height" constant="127" id="txf-3J-iuN"/>
+            </constraints>
+            <point key="canvasLocation" x="311" y="1058.5"/>
+        </customView>
+        <customView translatesAutoresizingMaskIntoConstraints="NO" id="XG3-u6-Mfv" userLabel="Sidebar 2">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="96"/>
+            <constraints>
+                <constraint firstAttribute="height" constant="96" id="Eu2-Q4-28V"/>
+                <constraint firstAttribute="width" constant="300" id="fyY-89-AlR"/>
+            </constraints>
+            <point key="canvasLocation" x="307.5" y="1214"/>
+        </customView>
+        <customView translatesAutoresizingMaskIntoConstraints="NO" id="zeB-pO-YJc" userLabel="Sidebar 3">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="96"/>
+            <constraints>
+                <constraint firstAttribute="width" constant="300" id="6eg-3e-3hw"/>
+                <constraint firstAttribute="height" constant="96" id="yXA-VH-8b0"/>
+            </constraints>
+            <point key="canvasLocation" x="311" y="1366"/>
+        </customView>
+        <customView translatesAutoresizingMaskIntoConstraints="NO" id="pmn-jk-mcj" userLabel="Sidebar 4">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="96"/>
+            <constraints>
+                <constraint firstAttribute="height" constant="96" id="MJY-k4-is3"/>
+                <constraint firstAttribute="width" constant="300" id="pNt-QG-qC1"/>
+            </constraints>
+            <point key="canvasLocation" x="291" y="1516"/>
+        </customView>
+        <viewController title="Sidebar 1" nibName="DisclosureViewController" id="cuP-yJ-JB9" userLabel="sidebarVC1" customClass="sideVC1" customModule="Sidebar_Demo" customModuleProvider="target">
+            <connections>
+                <outlet property="panelView" destination="pLM-PD-69i" id="Ejy-Ty-6cp"/>
+            </connections>
+        </viewController>
+        <viewController title="Sidebar 2" nibName="DisclosureViewController" id="Qtx-O2-6ok" userLabel="sidebarVC2" customClass="sideVC2" customModule="Sidebar_Demo" customModuleProvider="target">
+            <connections>
+                <outlet property="panelView" destination="XG3-u6-Mfv" id="UaZ-eX-AYg"/>
+            </connections>
+        </viewController>
+        <viewController title="Sidebar 3" nibName="DisclosureViewController" id="BuN-ra-HM0" userLabel="sidebarVC3" customClass="sideVC3" customModule="Sidebar_Demo" customModuleProvider="target">
+            <connections>
+                <outlet property="panelView" destination="zeB-pO-YJc" id="cxG-Nu-Qzp"/>
+            </connections>
+        </viewController>
+        <viewController title="Sidebar 4" nibName="DisclosureViewController" id="uKX-NO-ydH" userLabel="sidebarVC4" customClass="sideVC4" customModule="Sidebar_Demo" customModuleProvider="target">
+            <connections>
+                <outlet property="panelView" destination="pmn-jk-mcj" id="NCR-oe-sf0"/>
+            </connections>
+        </viewController>
+        <viewController id="Ewd-qP-OnO" userLabel="StackViewCiontroller">
+            <connections>
+                <outlet property="view" destination="cOR-nk-56r" id="lBP-n5-nBB"/>
+            </connections>
+        </viewController>
     </objects>
 </document>
